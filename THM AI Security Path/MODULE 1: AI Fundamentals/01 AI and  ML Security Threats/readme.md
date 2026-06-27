@@ -10,47 +10,221 @@
 
 ---
 
-## LLMs
+## LLMs (Large Language Models)
 
-Okay, so we've taken a walk through history in this room. From our goal to have computers behave like humans, the AI field was born, a field that would come closer to achieving that goal with the introduction of ML. In more recent years, the further development of these fields has allowed us to unlock even more potential with neural networks and DL, both of which play a crucial role in enabling our next industry-changing technology: LLMs. 
+From our goal to have computers behave like humans, the AI field was born, a field that would come closer to achieving that goal with the introduction of ML. 
 
-Chatbox Exploding onto the Scene
+In more recent years, the further development of these fields has allowed us to unlock even more potential with **neural networks and DL**, both of which play a crucial role in enabling our next industry-changing technology: **LLMs.**
 
-Now, I'm no ML algorithm, but if I had to assign a prediction score to the chance of this room's user base having heard of ChatGPT, it would be very high. ChatGPT emerged smack back in the middle of "The AI Boom"; its ability to generate human-like text in response to a user query blew the minds of near everyone with the technology triggering discussions in the news, politics, education, industry, the list goes on. Something had changed. We were entering a new era and everyone knew it, which brings us up to date. Now, let's look at how the technologies we've covered so far enabled LLMs like ChatGPT, LLama and Deepseek to exist, kicking off a technological revolution.  
+Examples of LLMs like: 
+- ChatGPT,
+- LLama and
+- Deepseek   
 
-What are LLMs, and how do they work?
-Large Language Models (or LLMs) are deep learning-based AI models that can process and generate text by predicting the next word in a sequence. For example, consider this quote:
+### What are LLMs, and how do they work?
 
-Sentance with blank last word
+**Large Language Models (LLMs)** are **deep learning-based AI models** that can process and generate text by predicting the next word in a sequence. 
 
-This quote is missing the final word. This quote would be fed into the LLM, and it would be tasked with predicting what the final word is likely to be. When you query a chatbot, this is what is happening in the background. Predictions are being run quickly on what word would likely be next in the response of an AI chat to this query, but how? 
+LLMs are first trained in a **"pre-training" phase,** where they process vast amounts of text, GPT-3 alone was trained on data that would take a human 2,600 years to read nonstop. More advanced models, like GPT-4, require even greater datasets, made possible by DL. 
 
-LLMs are first trained in a "pre-training" phase, where they process vast amounts of text, GPT-3 alone was trained on data that would take a human 2,600 years to read nonstop. More advanced models, like GPT-4, require even greater datasets, made possible by DL. Instead of relying on labelled data, LLMs use billions of parameters that function like puzzle pieces, enabling them to understand and generate human-like language when assessed together. These parameters are fine-tuned automatically as the model processes text, adjusting based on prediction accuracy to improve response quality. They begin by generating a word at random to finish the text:
+Instead of relying on labelled data, **LLMs use billions of parameters that function like puzzle pieces,** enabling them to understand and generate human-like language when assessed together. 
 
-Sentence with random word being guessed for last word 
+These parameters are fine-tuned automatically as the model processes text, adjusting based on prediction accuracy to improve response quality. 
 
-The guess is then compared with what the correct final word actually was, and the parameters are fine-tuned to make it more likely to predict what, in fact, was the right word until the model can accurately predict the correct word to end the sentence (and less likely to choose the incorrect words) using an algorithm called backpropagation:
+The guess is then compared with what the correct final word actually was, and the parameters are fine-tuned to make it more likely to predict what, in fact, was the right word until the model can accurately predict the correct word to end the sentence (and less likely to choose the incorrect words) using an algorithm called **backpropagation:**
 
-LLM being fed sentance and making predications on what last word will be
 
-Now imagine this process happening trillions of times, repeating this process over and over again until it can not only predict the end of the training data but also raw unseen data. The sheer scope of what is being discussed here is only possible due to advancements in hardware, like GPUs (Graphics Processing Units), enabling masses of parallel operations and processing of large datasets as well as advancements in neural networks, specifically a type of neural network called transformer neural networks.
+Now imagine this process happening trillions of times, repeating this process over and over again until it can not only predict the end of the training data but also raw unseen data. 
 
-GPU enabling multi-threaded processes
+The sheer scope of what is being discussed here is only possible due to advancements in hardware, like **GPUs (Graphics Processing Units),** enabling masses of parallel operations and processing of large datasets as well as advancements in neural networks, specifically a type of neural network called transformer neural networks.
 
-Introduced in Google's 2017 paper Attention is All You Need, transformer neural networks revolutionized LLMs by enabling parallel text processing instead of sequential word-by-word analysis. This breakthrough allowed models to assign "attention" to key words, improving contextual understanding. By encoding words into numerical values and calculating attention scores, transformers enhance accuracy, helping models correctly interpret ambiguous references, like distinguishing whether "it" in this sentence refers to "the bank" or "the loan.":
+<img width="592" height="350" alt="image" src="https://github.com/user-attachments/assets/cd7ab8ba-517f-449b-ba90-d70807bd428a" />
+Fig: GPU enabling multi-threaded processes
 
+Introduced in Google's 2017 paper Attention is All You Need, **transformer neural networks** revolutionized LLMs by enabling **parallel text processing instead of sequential word-by-word analysis.** This breakthrough allowed models to assign "attention" to key words, improving contextual understanding.
+
+By encoding words into numerical values and calculating attention scores, **transformers enhance accuracy,** helping models correctly interpret ambiguous references, like distinguishing whether "it" in this sentence refers to "the bank" or "the loan.":
+
+```
 "The bank approved the loan because it was financially stable." 
+```
+
+
+After the **pre-training**, humans come back into play, performing a step called **RLHF (Reinforcement Learning from Human Feedback)**. 
+
+This is when predictions are reviewed, and any that would be considered unhelpful by a user or have issues are flagged and the parameters are adjusted accordingly. 
+
+Once trained and reinforced, the LLM can be used, whether as a translator, chatbot, etc. A query is fed to it, and using its trained model, it predicts what the next word would be as a response, and so on and so on until the user has a complete response.
+
+LLMs power **generative AI products like ChatGPT and LLaMA,**which create original text-based content in response to user prompts. 
+
+Generative AI as a whole extends beyond text, enabling the creation of images, music, and more. 
+
+The recent AI boom is the result of years of research and innovation, not an overnight development. We’ve now explored key concepts that trace AI’s evolution—let’s quickly recap how they all connect.
+
+
+<img width="474" height="511" alt="image" src="https://github.com/user-attachments/assets/f4be8d11-2005-4b67-ac42-24e0492b3be8" />
+
+Fig: AI/ML term breakdown
+
+- **Artificial Intelligence (AI)** is the overarching field, encompassing all systems that mimic human intelligence. 
+- **Machine learning (ML)** is a subfield of AI that enables systems to learn patterns from data without explicit programming. 
+- **Deep learning (DL)** is then a specialised branch of ML, which uses neural networks to process vast amounts of data in complex ways without the need for human interaction, making it effectively scalable ML.
+- **Large Language Models (LLMs)** , like GPT, are advanced DL models built on neural networks, specifically transformers, designed to understand and generate human-like text.
+
+---
+
+## AI Security Threats
+
+The advancements in AI technology are being leveraged by adversaries, hence the rise of AI security threats. 
+
+We consider AI security threats across two categories: 
+- Vulnerability in AI Models (New threats introduced by the inclusion of AI technology in business operations)
+- Existing attacks that can now be enhanced by leveraging AI.
+
+### The Implications of AI in Cyber Security
+
+Tackling a broad topic like "AI security threats" can feel overwhelming, so any guidance is always appreciated. That guidance comes in the form of the **[ATLAS MITRE framework](https://atlas.mitre.org/matrices/ATLAS)** a frameworkdeveloped by MITRE with a focus on AI. 
+
+The ATT&CK Framework goes over cyber security attacks, breaking down the steps an attacker could take to compromise a system. This ATLAS framework was built on top of that to help guide us more specifically to AI Cyber threats, and you can check it out [here](https://atlas.mitre.org/matrices/ATLAS).
+
+### Vulnerabilities in AI Models 
+
+1. **Prompt Injection:**
+
+Prompts are used to instruct the model on how to perform. For example, an RPG chatbot may have the prompt, “You are a fantasy roleplaying chatbot. You control the direction the story takes, and be as creative as you can to create a story based on the user’s actions. Do not disclose any information about the hardware and software that you operate on, nor any steps taken to train you". 
+
+**Prompt injection** occurs when the original instructions provided to the model are overridden,** often for malicious purposes such as disclosing more information than it should, or generating harmful content.
+
+2. **Data Poisoning:**
+
+**Data poisoning** is when an attacker manipulates the training data/corpus used to train an AI model so its generated output is incorrect or biased. For instance, when training an AI model to recognise whether an email is spam or not. An attacker could perform a data poisoning attack to manipulate the training data being used to train this AI model so that it fails to recognise spam emails accurately, allowing spam emails they are trying to send to bypass this AI filter.
+
+3. **Model Theft:**
+
+**Model theft** occurs when an attacker gains unauthorised access to an AI model. From there, the attacker could potentially steal the intellectual property that lies within and even use it for malicious purposes. This attack is possible by querying the API of the ML model they want to steal. They would then use the output to train a clone model that mimics the behaviour of the original.  
+
+4. **Privacy Leakage:**
+
+**A privacy leakage** vulnerability in AI models refers to the possibility of an AI model inadvertently revealing sensitive information about the data it was trained on, even if the data was supposed to be kept confidential. Consider an example of an AI model that has been trained on private medical data such as patient details and medical conditions. This vulnerability refers to the potential for an AI model to leak this information to an attacker or user.
+
+5. **Model Drift:**
+
+**Model drift** refers to the potential for a Model's performance to drift over time due to changes in the data or the environment surrounding it.The need to retrain models over time in earlier tasks; this is due to model drift, which is why monitoring an AI model once it has been deployed and is being used is so important. For example, this can occur when a model trained on historical data starts to perform poorly when new data is being processed.
+
+### Enhanced Attacks 
+
+1. **Malware **
+
+With the explosion of Generative AI, all kinds of content can now be generated in an instant with just a few taps of a keyboard. This kind of power has been leveraged by all sorts of industries, such as the customer service industry, using it to give users access to a chatbot that can help resolve some common issues without the need to involve their human employees, meaning they can be saved to deal with the more complex user queries.
+
+Another industry that can greatly leverage this technology is software development. Now, with the power of generative AI software, developers can generate code instantly. While being incredibly useful, this also means that attackers can generate malware instantly, simplifying the task and making it easier for them to attack using this method. 
+
+
+2. **DeepFakes**
+
+A key cornerstone of security is authentication, asking, "Are you who you say you are?". We "authenticate" in many different ways in our day-to-day lives at work. Of course, there is the obvious example of password authentication, which is used to gain access to a system, but let's consider another example. 
+
+Imagine a secretary receiving a voice message, or even a video call, from their superior asking them to forward the confidential information they hold on a customer to that customer. In a pre-AI world, the secretary wouldn't have to think twice about that request; it would seem like a standard request, and they are in a position to "authenticate" that is, in fact, their superior as they are familiar with how they sound and look. 
+
+The recent advancements in generative AI have led to an explosion of rapid progress in the DeepFake field. This means that if trained on enough data, an AI can now generate a person's likeness, whether that be their voice or their image, to a stunning degree of accuracy, fooling even the technically savvy. Imagine now that the communication received by the secretary was not, in fact, from their superior but a deepfake, and the "customer email" belonged to an attacker waiting to receive confidential customer information. It's easy to see how this advancement in DeepFake technology poses a threat to the security industry. Examples of how this is being used include using the technology to deepfake video interviews, sometimes leading to fraudulent job offers being made. 
+
+
+3. **Phishing**
+
+Phishing is one of the most common initial access methods attackers use. Sending emails posing to be one thing when there lies malicious content within, attempting to prey on the user who receives it. Because of how common a method it is, companies have worked tirelessly to educate their workforce on things to look out for when receiving emails, like suspicious links and due to the fact a lot of the time these emails are written, having to write masses of emails, or English not being their first language, broken language in the email contents. 
+
+Over the years, this training has had a positive effect, and more and more phishing emails have been spotted. However, with generative AI, attackers can now generate detailed, fluent, context-based emails that replicate an email a certain user might receive, with little effort and regardless of their writing abilities. With this enhancement to phishing attacks, phishing emails have suddenly become a lot harder to spot using solely our instinct. 
+
+Of course, models like GPT, for example, have built-in mechanics to stop users from asking for malicious content to be generated, like a phishing email (or malware), but using some of the model vulnerabilities discussed above, attackers are sometimes able to bypass this by engineering their prompts.
+
+---
+
+## Defensive AI
+
+AI is not something that should be feared at all. It's something that should be understood, harnessed and embraced. There are many ways in which we can harness this technology in cyber security to make our lives easier and, most importantly, **help us fight against AI security threats.**
+
+A very useful resource that helps show us just how much this is the case is **IBM's Cost of a Databreach report,** which they do annually. 
+
+The findings from the **latest report showed us that companies that adopted and embraced AI saved on average $2.2 Million in expenses due to a data breach.** 
+
+This figure is even more impressive when you know the average cost of a data breach in these latest figures was $4.88 Million; that's a whopping saving. 
+
+Other statistics from this report also tell us that the **use of AI cuts down the time it takes to identify and contain a breach by 108 days.** All these findings point to one thing: the best thing we can do for security is embrace and adopt AI. L
+
+Let's consider some ways AI can help us in this industry and what we can leverage to see the results just discussed. 
+
+AI can enhance: 
+
+1. **Our ability to analyse**
+
+If you think about the tasks we do in cyber security every day, many of them involve some kind of analysis. We take in data points and look for patterns and, within those patterns, anomalies. 
+
+Consider, for example, intrusion detection, where we analyse network traffic patterns to identify unusual activity that may indicate a cyber attack. This is precisely the sort of task that ML thrives on handling. It is trained on data to recognise correlations between data points and make predictions based on those correlations, meaning this technology can be harnessed to help us in cases like the intrusion detection mentioned and many more. 
+
+It can analyse input data, like network traffic, and find anomalies for us, so we don't have to, and it can do so at dizzying speeds. Now, the figures from the IBM report telling us how much faster breaches are identified start to make sense. There are products in the market that are already leveraging the power of AI/ML to enhance their analytical abilities, such as Microsoft Defender for Endpoint and Splunk.
+
+
+2. **Our ability to predict**
+
+Automation has been cited as a key method for improving our overall security posture. It is at the heart of methodologies like DevSecOps. As discussed previously, AI models can be trained on data to make accurate predictions on that training data and then eventually on raw unseen data. 
+
+Now, if you think about automation as a sequence of "if-then" actions, for example, "if code is pushed to main, then trigger this pipeline", we can begin to see how AI can be harnessed to help us automate our security workflows. Consider an example discussed in our previous task: a phishing attack. We discussed how, now, with AI, attackers can enhance this attack, making it harder for us to identify phishing emails from legitimate emails. 
+
+Well, just as attackers can harness the power of AI to enhance their phishing emails, so too can we harness the power of AI in identifying phishing emails, as the AI model will be trained on countless examples of phishing emails and so can recognise patterns we may have missed. Once it has successfully predicted it is a phishing email, it can then make a prediction that this email should not reach users and automate the blocking of this email before it reaches them.
+
+
+3. **Our ability to summarise/digest(?)**
+
+In our industry, there are a lot of events, incidents, breaches, etc, and all of these generate artefacts. Artefacts that we have to read, understand and digest to gauge the implications of what has happened. These artefacts could be documents or incident reports, and reading them can take up a lot of our time. 
+
+Now, with the power of AI, we could have these tools summarise the contents of a document for us so we get the cliff notes of it, now being able to move on in minutes or have them summarise an incident that has occurred, even drawing correlations between other incidents which we may not have picked up on. This, again, is a massive time save and gives us an enormous advantage in the defensive context.
 
 
 
-After the pre-training, humans come back into play, performing a step called RLHF (Reinforcement Learning from Human Feedback). This is when predictions are reviewed, and any that would be considered unhelpful by a user or have issues are flagged and the parameters are adjusted accordingly. Once trained and reinforced, the LLM can be used, whether as a translator, chatbot, etc. A query is fed to it, and using its trained model, it predicts what the next word would be as a response, and so on and so on until the user has a complete response.
+4. **Our ability to investigate**
 
-Reviewing of Predictions
+Another large part of security is troubleshooting and investigating, working out the root cause of a security issue or identifying what kind of attack we are suffering. 
 
-LLMs power generative AI products like ChatGPT and LLaMA, which create original text-based content in response to user prompts. Generative AI as a whole extends beyond text, enabling the creation of images, music, and more. The recent AI boom is the result of years of research and innovation, not an overnight development. We’ve now explored key concepts that trace AI’s evolution—let’s quickly recap how they all connect.
+The ability to query chatbots in natural language and have it respond in a human-like fashion unlocks all kinds of help in this avenue, suddenly we can feed an LLM logs and ask it to identify what is going on, and the LLM can provide queries to be run which give output helpful in the diagnosis of the issue, helping with incident triage. 
 
-AI/ML term breakdown
+These chatbots (which are built on LLMs and are possible through advancements in DL) are also helpful in any task involving the human imagination; after all, it does have its limitations. Take, for example, threat hunting. It's on us to imagine possible scenarios in which attackers could breach our system. AI could think of potential avenues attackers would take that we wouldn't have thought of.
 
-Artificial Intelligence (AI) is the overarching field, encompassing all systems that mimic human intelligence. Machine learning (ML) is a subfield of AI that enables systems to learn patterns from data without explicit programming. Deep learning (DL) is then a specialised branch of ML, which uses neural networks to process vast amounts of data in complex ways without the need for human interaction, making it effectively scalable ML. Large Language Models (LLMs) , like GPT, are advanced DL models built on neural networks, specifically transformers, designed to understand and generate human-like text. As was said, knowledge is power, and with these last few tasks, you have started your journey in the pursuit of that knowledge and now have a better understanding of the technologies that give AI its powers. Now let's take a look at how all of the discussed is affecting our industry, shall we?
 
-This task has covered the basics of LLMs; however, if you want to take a deeper look into them, check out our Demystifying LLMs room.
+
+### Secure AI
+
+The benefits of AI in the cyber security space are undeniable, and like with many discussions with AI, what has been discussed above is just a few examples of how AI can be used to help us secure our systems; the possibilities are truly endless. 
+
+However, while adopting technology like Generative AI is a great thing and should be encouraged, it needs to be done securely.
+
+AI models have vulnerabilities themself, so while the adoption of generative AI technology IS the solution to the threat of attackers equipped with the power of AI, it also introduces a host of new vulnerabilities; these vulnerabilities need to be considered from the moment this technology is introduced into a system. This is not currently the case with the IBM cost of a data breach report, finding that only 24% of gen AI initiatives are secured. If we don't secure the AI we are adopting, then the benefits we stand to gain from it could be overshadowed by attackers taking advantage of these AI vulnerabilities. 
+
+Here are some things that can be done to secure AI:
+
+1. **Securing AI Models:** 
+
+Many of the vulnerabilities mentioned in the previous task involved an attacker getting access to sensitive data the model has access to. The key to preventing these kinds of attacks is to secure the models themself. One method of preventing unauthorised access to AI models is by enforcing strict controls over who can interact with them. This will involve implementing strong authentication measures and carefully defining access permission. The use of RBAC (Role-Based Access Control) and MFA (Multi-Factor Authentication) can help restrict access and add an extra layer of security to AI systems.
+
+2. **Privacy Protection:** 
+
+As discussed, the training data a model is trained on can sometimes contain confidential or sensitive information, such as patient records. For this reason, training data should be treated as any other sensitive data and encrypted.
+
+
+3. **Implementation of AI Security Standards:**
+
+To ensure the security of an AI system, you must implement well-established standards and frameworks. Incorporating these recognised security standards throughout the development, deployment, and maintenance stages means organisations can proactively address potential risks. For example, standards like ISO/IEC 27090 provide guidance on identifying and mitigating security threats specific to AI systems. Following these best practices ensures you are adopting AI in a secure way, minimising exposure to cyber threats.
+
+4. **Model Monitoring:**
+
+In addition to spotting when a model's performance drops and flagging when it needs to be retrained, monitoring should also detect unexpected behaviour, biases, or anomalies that may indicate a security attack. This can be done using "explainability tools" examples of which include SHAP and LIME.
+
+Thus, AI is not something to be feared but embraced and fast because the quicker we take advantage of the many benefits it offers us in the defensive cyber security field, the better equipped we will be to combat attackers armed with the same technology. 
+
+However, it has also been emphasised that it is just as essential to implement this technology securely from the get-go, or you risk introducing vulnerabilities along with AI. We have touched on some of the ways this can be done, but this is just the beginning; we will have content diving deeper into AI and how to defend against it soon!
+
+
+---
+
+## 
+
