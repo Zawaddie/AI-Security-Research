@@ -1,12 +1,76 @@
 # AI/ML Security Threats
 
----
+The world is changing; industries are coming to terms with the reality of how they will be affected by Artificial Intelligence (AI), and cyber security is no different. 
 
-## Introduction
+This [room](https://tryhackme.com/room/aimlsecuritythreats) Brings an:
+- Understanding of AI, ML, and their impact on the cyber security industry.
+- Understanding of Deep Learning (DL) and neural networks, and how they have made the applications of AI, we see today, possible. 
+- Understanding of how adversaries use AI to enhance existing attacks and take. advantage of AI Model vulnerabilities.
+- Understanding of the key role AI will play in defending against AI.
 
 ---
 
 ## The Building Blocks of AI
+
+**Artificial intelligence**: refers to a machine or computer system that is able to carry out tasks that would otherwise require human reasoning, comprehension, problem-solving, or creativity.
+
+### Machine Learning
+
+A subfield of AI that refers to a computer’s ability to learn from data without being given instructions and is comparable to how the human brain learns. Over time, with more data and time, these algorithms will get better at accuracy and decisions. 
+
+ML follows a structured lifecycle to ensure the reliable development and deployment of models:
+- defining the problem. 
+- data is collection, cleaning, and preparation through feature engineering, ensuring meaningful patterns are extracted while avoiding overfitting (When a model's familiarity with the training data causes a failure to make generalisations on unseen/raw data).
+- The model is then trained using a selected algorithm, followed by evaluation and tuning to optimise performance.
+- Once refined, the model is deployed into a production environment for real-world use.
+- ongoing monitoring ensures the model maintains accuracy over time, triggering retraining when needed. 
+
+<img width="742" height="625" alt="image" src="https://github.com/user-attachments/assets/0a8defdb-5c28-4a2e-aa03-8dca088a442b" />
+fig: ML Lifecycle
+
+Since models require continuous improvement, the Machine Learning Lifecycle remains an iterative process.
+
+### Machine Learning Algorithms 
+
+**ML algorithms** are the mathematical methods used to learn patterns from data.
+
+**ML models** are the trained outputs derived from these algorithms. 
+
+These algorithms consist of three key components: 
+- a decision process, which makes predictions or classifications based on input data;
+- an error function, which evaluates performance and provides feedback;
+- a model optimisation process, which fine-tunes the algorithm to minimise errors and improve accuracy.
+
+This iterative process continues until the model reaches a satisfactory performance level.
+
+<img width="467" height="217" alt="image" src="https://github.com/user-attachments/assets/27c8a7e5-695f-4961-a9f3-453bcc5b0c8a" />
+
+Categories of ML algorithms: 
+- supervised learning: relies on labeled data to train models for classification or regression tasks.
+- unsupervised learning: works with unlabeled data to discover hidden patterns, often using clustering, association, or dimensionality reduction techniques. 
+- semi-supervised learning: combines elements of both, using a small portion of labeled data to guide the learning process
+- reinforcement learning: mimics human learning by rewarding correct decisions and penalizing mistakes, allowing an agent to refine its actions over time to achieve the best outcome.
+
+
+### Neural networks and Deep learning
+
+<img width="528" height="456" alt="image" src="https://github.com/user-attachments/assets/adbbb340-250f-4e46-b573-46ad23f33f90" />
+
+Like the human brain processes sensory input, the input layer receives raw data, with the number of nodes depending on the data type (e.g., a 4x4 pixel image has 16 nodes). Each node represents a neuron, and connections between them act as synapses. 
+
+The hidden layers process and refine the input, bringing the network closer to a prediction. Each connection has a weight, determining its importance—for example, in email classification, the body text might have more weight than the subject line. 
+
+The output layer then produces the final prediction.
+
+Self-learning process mimics the human brain, and when a network has more than three layers, it is classified as a Deep Learning algorithm.
+
+### ML vs DL
+
+Like ML, DL is concerned with receiving data as input and producing some kind of prediction or classification as output. DL can take in labelled datasets, but the key difference is that DL doesn't need the data to be labelled. 
+
+A DL algorithm can take unlabelled, unstructured raw data and determine its key features, which separate it from other categories. The important advantage here over ML is that the data doesn't need labelling; this means DL doesn't require human interaction and, in that way, is self-learning. 
+
+Because no human intervention is needed, larger datasets can be processed and can, therefore, be thought of as "scalable ML". 
 
 ---
 
