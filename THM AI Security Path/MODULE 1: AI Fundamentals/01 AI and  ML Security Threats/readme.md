@@ -25,7 +25,9 @@ ML follows a structured lifecycle to ensure the reliable development and deploym
 - Once refined, the model is deployed into a production environment for real-world use.
 - ongoing monitoring ensures the model maintains accuracy over time, triggering retraining when needed. 
 
-<img width="742" height="625" alt="image" src="https://github.com/user-attachments/assets/0a8defdb-5c28-4a2e-aa03-8dca088a442b" />
+
+<img width="585" height="355" alt="image" src="https://github.com/user-attachments/assets/7669ee0d-052b-48ee-acf8-b363add76f71" />
+
 fig: ML Lifecycle
 
 Since models require continuous improvement, the Machine Learning Lifecycle remains an iterative process.
@@ -71,6 +73,8 @@ Like ML, DL is concerned with receiving data as input and producing some kind of
 A DL algorithm can take unlabelled, unstructured raw data and determine its key features, which separate it from other categories. The important advantage here over ML is that the data doesn't need labelling; this means DL doesn't require human interaction and, in that way, is self-learning. 
 
 Because no human intervention is needed, larger datasets can be processed and can, therefore, be thought of as "scalable ML". 
+
+<img width="693" height="411" alt="image" src="https://github.com/user-attachments/assets/91015834-fbdf-4a2f-a4ce-d7da003ed652" />
 
 ---
 
@@ -290,5 +294,110 @@ However, it has also been emphasised that it is just as essential to implement t
 
 ---
 
-## 
+## Practical
+
+Presented with an AI assistant that works very simply: send it a prompt and it will return an answer.
+
+<img width="893" height="558" alt="image" src="https://github.com/user-attachments/assets/078cfb4b-661e-4f95-9822-a9e4e2bcc6ee" />
+
+### Defensive AI use cases:
+
+1. Log analysis
+
+Logs are the first line of defence in cyber security, but interpreting them quickly is critical, especially when responding to an active incident. Let's see how AI can assist by analysing and explaining a log entry in these high-intensity situations, or to help explain in general. We can use AI for these purposes by running a prompt like this:
+
+```
+Here’s a logline:
+
+Apr 22 11:45:09 ubuntu sshd[1245]: Failed password for invalid user admin from 203.0.113.55 port 56231 ssh2
+
+Can you explain what is happening in this log entry?
+```
+<img width="869" height="537" alt="image" src="https://github.com/user-attachments/assets/7eaa5d5a-4ee8-4d6f-ba8c-9a9b582573c6" />
+
+2. Phishing Email Detection
+
+AI can help defenders identify phishing attempts by analysing suspicious emails for common red flags. 
+
+Here's a suspicious email. Can you identify if it's a phishing attempt and explain why?
+
+```
+Subject: Urgent: Account Verification Needed
+
+Dear User,
+
+We've detected unusual login activity on your company Microsoft 365 account from a new device in Frankfurt, Germany. For your security, we've temporarily suspended access.
+
+To restore access, please verify your identity within the next 12 hours by visiting the secure link below:
+
+=I [https://microsoft365-support-verify.com/login](https://microsoft365-support-verify.com/login)
+
+If you do not verify your account, it will remain locked and you may lose access to important work files and emails.
+
+Thank you for your cooperation.
+
+Microsoft 365 Support Team
+security@m1crosoft365-security.com 
+```
+<img width="902" height="468" alt="image" src="https://github.com/user-attachments/assets/07170aaf-44e2-4ed2-9db9-5cc8b5d4808e" />
+
+3. Threat Hunting Scenario 
+
+Threat hunting relies heavily on creativity; defenders must think like attackers to find hidden threats. As previously mentioned, the limit of the human imagination can sometimes lead us to missing potential attack scenarios. 
+
+AI can help brainstorm new hunting ideas using a prompt like this:
+
+```
+Can you suggest three realistic threat hunting scenarios that a cyber security analyst should investigate within a corporate network environment?
+```
+<img width="867" height="447" alt="image" src="https://github.com/user-attachments/assets/1c0e1be0-5b45-4ea3-98c7-971c17b45d07" />
+
+
+4. Content Generation
+
+AI can assist by generating technical resources like detection rules or regex. Here, we'll see if it can create a regex pattern useful for us in a defensive cyber security context. Let's try giving the LLM a prompt like this:
+
+```
+Please write a regex pattern that would match failed SSH login attempts in a typical Linux system authentication log.
+```
+
+<img width="900" height="408" alt="image" src="https://github.com/user-attachments/assets/8ebac1bd-1043-4092-910c-0bf538088463" />
+
+
+Putting it to the test
+
+It has now been established how AI can help us in a cinch when securing our systems. Let's finish this room up by showcasing AI's ability to fetch information at a moment's notice. This can help us with troubleshooting, research etc but right now we're going to use to get a flag. The flag for this task is as follows:
+
+```
+thm{DNS over HTTPS (DoH) Port/SYN flood timeout/ windows ephemeral port range size}
+```
+That is to say, the numerical values that these represent will make up the flag. Without the need to look these values up individually we can simply ask your AI assistant:
+
+```
+what are these values:
+
+DNS over HTTPS (DoH) Port , SYN flood timeout and Windows ephemeral port range size? 
+
+```
+
+<img width="893" height="484" alt="image" src="https://github.com/user-attachments/assets/dd30ade3-a69c-400f-9d61-274392668993" />
+
+Hence flag: ```thm{443/60/16384}```
+
+
+## Conclusion
+
+
+- Artificial Intelligence (AI) is the overarching field concerned with enabling machines/systems to mimic human behaviour.
+
+- Machine learning (ML) is a subfield of AI in which a model can be fed and trained on input and used to make predictions.
+
+- Deep learning (DL) is then a subfield of ML. It no longer needs human interaction and can self-tech and process mass amounts of data, possible through the use of Neural Networks.
+  
+- DL has enabled the emergence of technologies like LLMs (and other generative AI), which, through the use of transformer neural networks and attention, can be queried in natural language, understand it and respond in a human-like, conversational fashion.
+
+  
+AI is a dangerous weapon in the hands of an attacker. It has the potential to enhance existing cyber attacks like phishing and increase the attack surface by introducing AI vulnerabilities.
+
+While being dangerous in the hands of attackers, AI can be invaluable in the fight against AI cyber threats and should be adopted, but done so securely so vulnerabilities are not introduced.
 
