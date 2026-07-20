@@ -166,7 +166,7 @@ This means trusting a model is, fundamentally, trusting the process that produce
 
 ### Model Cards
 
-The documentation artefact designed to address this is the model card: a structured document that accompanies a model and describes what it is, how it was built, and where it falls short. The concept was introduced by Google researchers in 2019(opens in new tab) and has since become the closest thing the industry has to a standard transparency format.
+The documentation artefact designed to address this is the model card: a structured document that accompanies a model and describes what it is, how it was built, and where it falls short. The concept was introduced by [Google researchers in 2019](https://arxiv.org/abs/1810.03993) and has since become the closest thing the industry has to a standard transparency format.
 
 A well-formed model card should give you the answers to the questions you can't get by inspecting the weights themselves:
 
@@ -176,17 +176,13 @@ Think of it like a nutritional label for an AI model. You can't see inside the p
 
 ### The Gaps
 
-Have you ever checked out a food label, and it all sounds good until you find out your chicken slices are only 49% chicken? Well, in practice, model cards can also be frequently incomplete, vague, or (in some cases) absent entirely. Unlike food labels, there's no regulatory requirement to produce one; as of now, it remains voluntary for most use cases. The incentive to be thorough is weak when disclosing limitations might reduce adoption. The Data Provenance Initiative(opens in new tab)'s audit of over 1,800 datasets found documentation gaps throughout the AI supply chain, and model cards sit at the end of that same underdocumented pipeline.
+Have you ever checked out a food label, and it all sounds good until you find out your chicken slices are only 49% chicken? Well, in practice, model cards can also be frequently incomplete, vague, or (in some cases) absent entirely. Unlike food labels, there's no regulatory requirement to produce one; as of now, it remains voluntary for most use cases. The incentive to be thorough is weak when disclosing limitations might reduce adoption. [The Data Provenance Initiative](https://arxiv.org/abs/2310.16787)'s audit of over 1,800 datasets found documentation gaps throughout the AI supply chain, and model cards sit at the end of that same underdocumented pipeline.
 
 From a security standpoint, a sparse or missing model card isn't an inconvenience; it's a warning sign. It means the organisation distributing the model either didn't evaluate it thoroughly enough to document findings, or chose not to share what they found. Either way, the downstream user is flying blind.
 
 In Short:
 
 **The model card is your audit trail. In the absence of one, there is no audit trail, just a black box and the hope that whoever built it was thorough. In security, hope is not a control.**
-
-
-
-
 
 
 
@@ -197,3 +193,14 @@ In Short:
 - Understood how key model-building decisions (overfitting, quantisation, and federated learning) each introduce distinct security risks
 - Understood the inheritance problem and what organisations unknowingly take on when fine-tuning pre-trained models
 - Recognised why trained models are opaque black boxes, and what model cards do (and fail to do) to address this.
+
+
+**Key Takeaways:**
+
+- AI training data is drawn from poorly documented, unaudited sources, meaning most organisations have no reliable answer to where their training data came from, what it contained, or whether it was tampered with
+- PII and live credentials routinely end up baked into model weights through large-scale web scraping and cannot be patched out once the model is deployed
+- Model-building decisions such as quantisation and federated learning introduce security trade-offs that are rarely documented, meaning organisations inherit unknown behaviour modifications alongside efficiency gains
+- Fine-tuning a pre-trained model inherits everything beneath it: safety alignment erodes with as few as 10 adversarial examples, and fine-tuned models are measurably more susceptible to prompt injection than their base counterparts
+- Trained model weights are fundamentally opaque; security testing can only sample behaviour rather than audit it, and model cards (the primary transparency mechanism) remain voluntary, frequently incomplete, and sometimes absent
+
+---
